@@ -3,294 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Yonggun Choi — Manager, AI Partnerships at SBS. AI project planning, external partnerships, government-funded R&D and internal AI transformation.">
+  <meta name="description" content="Yonggun Choi, Manager in the AI Partnerships Team at SBS. Experience, education and projects in AI planning, government-funded R&D and internal AI transformation.">
   <meta name="theme-color" content="#ffffff">
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Yonggun Choi — AI Partnerships at SBS">
-  <meta property="og:description" content="Experience, education and projects in AI partnerships, government-funded R&D and internal AI transformation.">
+  <meta property="og:title" content="Yonggun Choi">
+  <meta property="og:description" content="Manager, AI Partnerships at SBS. Experience, education and projects.">
   <meta property="og:url" content="https://ch2cooh.github.io/">
-  <title>Yonggun Choi — AI Partnerships at SBS</title>
+  <title>Yonggun Choi</title>
   <link rel="canonical" href="https://ch2cooh.github.io/">
-  <link rel="preload" href="assets/fonts/Manrope-Variable.ttf" as="font" type="font/ttf" crossorigin>
   <style>
-    @font-face { font-family: Manrope; src: url("assets/fonts/Manrope-Variable.ttf") format("truetype"); font-weight: 200 800; font-style: normal; font-display: swap; }
-    @font-face { font-family: "Instrument Serif"; src: url("assets/fonts/InstrumentSerif-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: swap; }
-    @font-face { font-family: "Instrument Serif"; src: url("assets/fonts/InstrumentSerif-Italic.ttf") format("truetype"); font-weight: 400; font-style: italic; font-display: swap; }
-    :root { color-scheme: light; --paper: #fff; --ink: #20231f; --muted: #62685f; --line: #e0e4dd; --soft: #f6f7f4; --lime: #d4f56a; --green: #355b23; --body: Manrope, Arial, sans-serif; --display: "Instrument Serif", Georgia, serif; --mono: "SFMono-Regular", Consolas, monospace; }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 100px; }
-    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--body); font-size: 1rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
-    ::selection { background: var(--lime); color: var(--ink); }
-    a { color: inherit; text-decoration: none; text-underline-offset: .25em; }
-    a:focus-visible, summary:focus-visible { outline: 2px solid var(--green); outline-offset: 6px; border-radius: 2px; }
-    h1, h2, h3, h4, p, figure, dl, dd { margin: 0; }
-    h1, h2, h3, h4, p, a, span, dd { overflow-wrap: anywhere; }
-    ul, ol { list-style: none; margin: 0; padding: 0; }
-    .wrap { width: min(100%, 1176px); margin: 0 auto; padding: 0 48px; }
-    .skip-link { position: fixed; top: 10px; left: 10px; transform: translateY(-160%); z-index: 10; padding: 9px 16px; background: var(--lime); }
-    .skip-link:focus { transform: none; }
-    .site-header { border-bottom: 1px solid var(--line); background: rgba(255,255,255,.96); position: sticky; top: 0; z-index: 5; }
-    .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-    .brand { display: inline-flex; align-items: center; gap: 13px; font-weight: 700; font-size: .875rem; letter-spacing: -.025em; }
-    .brand-symbol { display: grid; place-items: center; width: 39px; height: 39px; background: var(--ink); color: var(--lime); border-radius: 50%; font-family: var(--display); font-size: 1.3rem; font-weight: 400; letter-spacing: -.07em; transition: transform .25s; }
-    .brand:hover .brand-symbol { transform: rotate(-10deg); }
-    .nav { display: flex; align-items: center; gap: 29px; font-size: .875rem; color: var(--muted); }
-    .nav a { padding: 12px 0; position: relative; }
-    .nav a::after { content: ""; position: absolute; bottom: 8px; left: 0; height: 2px; width: 100%; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .2s; }
-    .nav a:hover::after { transform: scaleX(1); }
-    .hero { display: grid; grid-template-columns: minmax(0,1fr) 256px; grid-template-areas: "name photo" "bio photo" "links photo"; column-gap: 92px; padding: 67px 0 69px; align-items: start; }
-    .hero-name { grid-area: name; }
-    .eyebrow { font-family: var(--mono); font-size: .75rem; line-height: 1.6; letter-spacing: .075em; text-transform: uppercase; color: var(--muted); }
-    .hero-eyebrow { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .sbs-label { background: var(--lime); padding: 2px 8px; color: var(--ink); letter-spacing: .06em; }
-    h1 { font-family: var(--display); font-size: clamp(5rem, 8.9vw, 7.25rem); font-weight: 400; line-height: .88; letter-spacing: -.035em; margin: 27px 0 0; }
-    h1 .first-name, h1 em { display: block; }
-    h1 em { font-weight: 400; margin-top: 6px; }
-    .name-period { color: #647f24; }
-    .hero-bio { grid-area: bio; max-width: 610px; margin-top: 29px; font-size: 1.0625rem; color: #51584d; line-height: 1.9; }
-    .hero-bio strong { color: var(--ink); font-weight: 600; }
-    .social-links { grid-area: links; display: flex; flex-wrap: wrap; gap: 25px; margin-top: 23px; align-items: center; font-size: .875rem; font-weight: 650; }
-    .text-link { display: inline-flex; align-items: center; gap: 7px; padding-bottom: 2px; border-bottom: 1px solid #bdc5b4; transition: border-color .2s; }
-    .text-link:hover { border-color: var(--ink); }
-    .arrow { display: inline-block; transition: transform .2s; }
-    a:hover .arrow { transform: translate(2px,-2px); }
-    .portrait-wrap { grid-area: photo; align-self: center; position: relative; margin: 14px 9px 4px 0; }
-    .portrait-wrap::before { content: ""; position: absolute; inset: -12px -12px 12px 12px; background: var(--lime); transform: rotate(4deg); transition: transform .4s; }
-    .portrait-wrap:hover::before { transform: rotate(1deg); }
-    .portrait-card { position: relative; background: var(--ink); border: 1px solid var(--ink); }
-    .portrait-card img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; background: white; }
-    .portrait-caption { display: flex; flex-wrap: wrap; gap: 5px 12px; align-items: center; justify-content: space-between; padding: 13px 15px; color: #fff; font-family: var(--mono); font-size: .75rem; }
-    .portrait-caption span:last-child { color: var(--lime); }
-    .section { display: grid; grid-template-columns: 220px minmax(0,1fr); column-gap: 66px; padding: 49px 0 53px; border-top: 1px solid var(--line); }
-    .section-heading { align-self: start; }
-    .section-index { display: block; font-family: var(--mono); color: var(--muted); font-size: .75rem; margin-bottom: 8px; }
-    h2 { font-family: var(--display); font-size: 2.55rem; font-weight: 400; line-height: 1.1; letter-spacing: -.015em; }
-    .section-heading .eyebrow { margin-top: 16px; }
-    .timeline { padding-top: 1px; }
-    .timeline-item { display: grid; grid-template-columns: 145px minmax(0,1fr); gap: 23px; position: relative; padding: 0 0 36px; }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-dates { padding-top: 2px; color: var(--muted); font-family: var(--mono); font-size: .8125rem; line-height: 1.8; }
-    .timeline-dates time { display: block; white-space: nowrap; }
-    .timeline-dates .to { display: inline-block; margin-right: 5px; }
-    .timeline-info { position: relative; border-left: 1px solid var(--line); padding: 0 0 2px 25px; }
-    .timeline-info::before { content: ""; position: absolute; top: 7px; left: -4px; width: 7px; height: 7px; border: 1px solid #7f8b76; background: var(--paper); border-radius: 50%; }
-    .is-current .timeline-info::before { background: var(--ink); border-color: var(--ink); box-shadow: 0 0 0 5px var(--lime); }
-    .timeline-title { font-size: 1.125rem; line-height: 1.45; font-weight: 750; letter-spacing: -.035em; }
-    .role-line { margin-top: 5px; color: var(--ink); font-size: .9375rem; }
-    .team-line { margin-top: 3px; font-size: .875rem; color: var(--muted); }
-    .timeline-description { margin-top: 14px; color: #5b6256; font-size: 1rem; line-height: 1.8; }
-    .education-info { padding-bottom: 8px; }
-    .projects-section { padding-bottom: 55px; }
-    .project-group-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 14px; padding-bottom: 15px; border-bottom: 1px solid var(--ink); }
-    .project-group-heading h3 { font-size: .875rem; font-weight: 700; letter-spacing: -.015em; }
-    .category-tag { padding: 3px 9px; background: var(--lime); font-family: var(--mono); font-size: .75rem; line-height: 1.5; }
-    .project { border-bottom: 1px solid var(--line); }
-    .project summary { display: grid; grid-template-columns: 28px minmax(0,1fr) 18px; gap: 14px; align-items: baseline; padding: 23px 0; list-style: none; cursor: pointer; }
-    .project summary::-webkit-details-marker { display: none; }
-    .project-number { color: var(--muted); font-family: var(--mono); font-size: .75rem; }
-    .project-title { display: block; font-size: 1.0625rem; font-weight: 650; letter-spacing: -.025em; line-height: 1.6; }
-    .project summary:hover .project-title { color: var(--green); }
-    .project-agency { display: block; margin-top: 8px; font-size: .8125rem; font-family: var(--mono); color: var(--muted); }
-    .disclosure { position: relative; width: 16px; height: 16px; align-self: start; margin-top: 6px; }
-    .disclosure::before, .disclosure::after { content: ""; position: absolute; top: 7px; left: 2px; width: 12px; height: 1px; background: currentColor; transition: transform .2s; }
-    .disclosure::after { transform: rotate(90deg); }
-    .project[open] .disclosure::after { transform: rotate(0); }
-    .project-body { padding: 0 32px 25px 42px; color: var(--muted); font-size: .9375rem; }
-    .project-body > p { margin-bottom: 18px; line-height: 1.8; }
-    .project-body cite { font-style: normal; color: var(--ink); }
-    .project-meta { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 18px; padding: 17px 20px; background: var(--soft); border-radius: 3px; }
-    .project-meta dt { font-size: .8125rem; line-height: 1.6; color: var(--muted); }
-    .project-meta dd { margin-top: 5px; color: var(--ink); font-size: 1rem; line-height: 1.6; font-weight: 650; }
-    .internal-projects { margin-top: 43px; }
-    .internal-projects .category-tag { background: var(--ink); color: #fff; }
-    .workstream { padding: 8px 0 0; }
-    .workstream h4 { font-size: 1.0625rem; font-weight: 650; letter-spacing: -.025em; }
-    .workstream p { margin-top: 8px; color: var(--muted); }
-    .workstream-status { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; color: var(--green); font-size: .8125rem; }
-    .workstream-status::before { content: ""; width: 5px; height: 5px; background: currentColor; border-radius: 50%; }
-    .footer { border-top: 1px solid var(--ink); padding: 28px 0 37px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; font-size: .8125rem; color: var(--muted); }
-    .footer a { color: var(--ink); }
-    .hero-name, .hero-bio, .social-links, .portrait-wrap { animation: arrive .7s ease both; }
-    .hero-bio { animation-delay: .08s; }
-    .social-links { animation-delay: .14s; }
-    .portrait-wrap { animation-delay: .1s; }
-    @keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-    @media (max-width: 1000px) {
-      .hero { column-gap: 50px; grid-template-columns: minmax(0,1fr) 225px; }
-      .section { grid-template-columns: 180px minmax(0,1fr); column-gap: 38px; }
-      .timeline-item { grid-template-columns: 115px minmax(0,1fr); gap: 17px; }
-      .timeline-info { padding-left: 21px; }
-    }
-    @media (max-width: 780px) {
-      .wrap { padding: 0 30px; }
-      .brand-name { display: none; }
-      .hero { grid-template-columns: minmax(0,1fr) 190px; column-gap: 35px; padding: 48px 0 50px; }
-      h1 { font-size: 5.8rem; }
-      .section { grid-template-columns: 1fr; row-gap: 29px; padding: 36px 0 40px; }
-      .section-heading { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
-      .section-index { margin-bottom: 0; }
-      .section-heading .eyebrow { margin-top: 0; margin-left: auto; }
-      h2 { font-size: 2.3rem; }
-      .timeline-item { grid-template-columns: 138px minmax(0,1fr); gap: 24px; }
-    }
+    html { scroll-padding-top: 24px; }
+    body { margin: 0; background: #fff; color: #282828; font-family: Arial, Helvetica, sans-serif; font-size: 1rem; line-height: 1.7; }
+    a { color: #245786; text-underline-offset: 3px; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid #245786; outline-offset: 4px; }
+    h1, h2, h3, p, dl, dd { margin: 0; }
+    h1, h2, h3, p, span, dd { overflow-wrap: anywhere; }
+    ol { margin: 0; padding: 0; list-style: none; }
+    .page { max-width: 880px; margin: 0 auto; padding: 52px 36px 28px; }
+    .skip-link { position: absolute; top: -70px; left: 12px; padding: 8px 12px; background: white; }
+    .skip-link:focus { top: 12px; }
+    .profile { display: grid; grid-template-columns: minmax(0,1fr) 132px; align-items: start; gap: 35px; }
+    h1 { font-size: 2rem; font-weight: 600; line-height: 1.3; margin-bottom: 8px; }
+    .role { color: #555; }
+    .intro { margin-top: 14px; }
+    .links { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 14px; font-size: .875rem; }
+    .portrait { display: block; width: 132px; height: 132px; object-fit: cover; }
+    .nav { display: flex; flex-wrap: wrap; gap: 24px; padding: 25px 0 17px; border-bottom: 1px solid #ddd; font-size: .875rem; }
+    .nav a { color: #444; text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
+    .section { padding-top: 30px; }
+    h2 { font-size: 1.25rem; line-height: 1.4; font-weight: 600; margin-bottom: 22px; }
+    .timeline-item { display: grid; grid-template-columns: 174px minmax(0,1fr); gap: 22px; margin-bottom: 25px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .dates { padding-top: 2px; color: #666; font-size: .875rem; }
+    .timeline-info { padding-left: 20px; border-left: 1px solid #ddd; }
+    h3 { font-size: 1rem; font-weight: 600; line-height: 1.6; }
+    .position { color: #444; margin-top: 2px; }
+    .team { color: #666; font-size: .875rem; margin-top: 2px; }
+    .description { margin-top: 9px; }
+    .section + .section { margin-top: 27px; border-top: 1px solid #ddd; }
+    .project-category { font-size: 1rem; margin-bottom: 13px; }
+    .project { padding: 13px 0; border-bottom: 1px solid #e6e6e6; }
+    .project:first-of-type { padding-top: 0; }
+    .project summary { cursor: pointer; line-height: 1.6; }
+    .project-title { font-weight: 600; }
+    .project-agency { display: block; margin: 4px 0 0 19px; color: #666; font-size: .875rem; font-weight: 400; }
+    .project-body { margin: 11px 0 2px 19px; }
+    .project-body p + p { margin-top: 9px; }
+    .agency-name { color: #666; font-size: .875rem; }
+    .project-meta { margin-top: 10px; }
+    .project-meta div { display: flex; flex-wrap: wrap; gap: 0 6px; margin-top: 3px; }
+    .project-meta dt { color: #666; }
+    .project-meta dd { color: #282828; }
+    .internal-projects { margin-top: 27px; }
+    .internal-projects h3 { margin-bottom: 9px; }
+    .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; margin-top: 36px; padding-top: 18px; border-top: 1px solid #ddd; color: #666; font-size: .875rem; }
     @media (max-width: 600px) {
-      html { scroll-padding-top: 86px; }
-      .wrap { padding: 0 23px; }
-      .header-inner { min-height: 72px; gap: 20px; }
-      .brand-symbol { width: 33px; height: 33px; font-size: 1.125rem; }
-      .nav { gap: 16px; font-size: .875rem; }
-      .hero { grid-template-columns: minmax(0,1fr) 115px; grid-template-areas: "name photo" "bio bio" "links links"; gap: 0 24px; padding: 39px 0 40px; }
-      .hero-eyebrow { display: block; font-size: .75rem; line-height: 1.9; letter-spacing: .025em; }
-      .sbs-label { display: table; margin-bottom: 8px; }
-      h1 { font-size: clamp(3.55rem, 12vw, 5rem); line-height: .94; margin-top: 18px; }
-      h1 em { margin-top: 0; }
-      .hero-bio { margin-top: 25px; font-size: 1rem; line-height: 1.85; }
-      .social-links { margin-top: 19px; }
-      .portrait-wrap { align-self: center; margin: 16px 4px 0 0; }
-      .portrait-wrap::before { inset: -7px -7px 7px 7px; transform: rotate(4deg); }
-      .portrait-caption { padding: 8px 9px; font-size: .75rem; }
-      .portrait-caption span:last-child { display: none; }
-      .timeline-item { grid-template-columns: 104px minmax(0,1fr); gap: 14px; padding-bottom: 32px; }
-      .timeline-info { padding-left: 19px; }
-      .timeline-dates { font-size: .75rem; }
-      .timeline-title { font-size: 1.0625rem; }
-      .timeline-description { margin-top: 12px; }
-      .project summary { grid-template-columns: 23px minmax(0,1fr) 14px; gap: 10px; padding: 21px 0; }
-      .project-body { padding-left: 33px; padding-right: 0; }
-      .project-meta { gap: 15px; padding: 14px; }
-      .project-group-heading { gap: 12px; }
-    }
-    @media (max-width: 370px) {
-      .hero { grid-template-columns: minmax(0,1fr) 87px; gap: 0 15px; }
-      h1 { font-size: clamp(2.7rem, 15vw, 3.45rem); }
-      .nav { gap: 11px; font-size: .8125rem; }
-      .timeline-item { grid-template-columns: 1fr; gap: 13px; }
-      .timeline-dates time { display: inline; }
-      .timeline-dates > span { margin-left: 7px; }
-      .timeline-info { margin-left: 4px; }
-      .project-meta { grid-template-columns: 1fr; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .page { padding: 30px 22px 24px; }
+      .profile { grid-template-columns: minmax(0,1fr) 96px; gap: 20px; }
+      .portrait { width: 96px; height: 96px; }
+      h1 { font-size: 1.75rem; }
+      .profile-text { display: contents; }
+      .profile-heading { grid-column: 1; grid-row: 1; }
+      .portrait { grid-column: 2; grid-row: 1; }
+      .intro { grid-column: 1 / -1; margin-top: 0; }
+      .links { grid-column: 1 / -1; margin-top: -7px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 7px; margin-bottom: 23px; }
+      .timeline-info { padding-left: 14px; }
+      .nav { gap: 23px; padding-top: 22px; }
+      .section + .section { margin-top: 23px; }
     }
     @media print {
       body { font-size: 10pt; }
-      .wrap { max-width: none; padding: 0; }
-      .site-header { position: static; }
-      .header-inner { min-height: 42px; }
-      .nav, .skip-link, .footer a { display: none; }
-      .hero { grid-template-columns: 1fr 140px; gap: 0 35px; padding: 28px 0; }
-      h1 { font-size: 55pt; }
-      .hero-bio { font-size: 10pt; }
-      .section { grid-template-columns: 130px minmax(0,1fr); gap: 24px; padding: 25px 0; }
-      .section-heading { display: block; }
-      .section-index { margin-bottom: 8px; }
-      h2 { font-size: 24pt; }
-      .timeline-item { grid-template-columns: 95px minmax(0,1fr); gap: 18px; }
-      .project, .timeline-item { break-inside: avoid; }
-      .project summary { cursor: auto; }
-      .hero-name, .hero-bio, .social-links, .portrait-wrap { animation: none; }
+      .page { max-width: none; padding: 0; }
+      .skip-link, .nav, .footer a { display: none; }
+      h1 { font-size: 22pt; }
+      h2 { font-size: 14pt; }
+      .profile { grid-template-columns: 1fr 100px; }
+      .portrait { width: 100px; height: 100px; }
+      .timeline-item, .project { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#about" aria-label="Yonggun Choi, back to introduction"><span class="brand-symbol" aria-hidden="true">YC</span><span class="brand-name">Yonggun Choi</span></a>
-      <nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a></nav>
-    </div>
-  </header>
-  <main class="wrap" id="main">
-    <section class="hero" id="about" aria-labelledby="profile-name">
-      <div class="hero-name">
-        <p class="eyebrow hero-eyebrow"><span class="sbs-label">SBS</span> Manager, AI Partnerships</p>
-        <h1 id="profile-name"><span class="first-name">Yonggun</span><em>Choi<span class="name-period">.</span></em></h1>
+  <main class="page" id="main">
+    <header class="profile" id="about">
+      <div class="profile-text">
+        <div class="profile-heading"><h1>Yonggun Choi</h1><p class="role">Manager, AI Partnerships · SBS</p></div>
+        <p class="intro">AI project planning, partnerships, government-funded R&D and internal AI transformation at SBS.</p>
+        <div class="links"><a href="https://www.linkedin.com/in/yonggun-choi-3a1a43320/">LinkedIn</a><a href="https://github.com/ch2cooh">GitHub</a></div>
       </div>
-      <p class="hero-bio">I work on <strong>AI project planning, partnerships and government-funded R&D</strong> at SBS, alongside internal AI transformation.</p>
-      <div class="social-links">
-        <a class="text-link" href="https://www.linkedin.com/in/yonggun-choi-3a1a43320/">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
-        <a class="text-link" href="https://github.com/ch2cooh">GitHub <span class="arrow" aria-hidden="true">↗</span></a>
-      </div>
-      <figure class="portrait-wrap">
-        <div class="portrait-card">
-          <img src="assets/profile.jpg" alt="Portrait of Yonggun Choi" width="400" height="400" fetchpriority="high">
-          <figcaption class="portrait-caption"><span>Yonggun Choi</span><span>SBS · Seoul</span></figcaption>
-        </div>
-      </figure>
-    </section>
+      <img class="portrait" src="assets/profile.jpg" alt="Yonggun Choi" width="400" height="400">
+    </header>
+    <nav class="nav" aria-label="Page navigation"><a href="#experience">Experience</a><a href="#education">Education</a><a href="#projects">Projects</a></nav>
     <section class="section" id="experience" aria-labelledby="experience-title">
-      <div class="section-heading"><span class="section-index">01 /</span><h2 id="experience-title">Experience</h2></div>
-      <ol class="timeline">
-        <li class="timeline-item is-current">
-          <div class="timeline-dates"><time datetime="2021-05">May 2021</time><span><span class="to">—</span> Present</span></div>
-          <div class="timeline-info">
-            <h3 class="timeline-title">SBS</h3>
-            <p class="role-line">Manager</p>
-            <p class="team-line">AI Partnerships Team, Policy Office</p>
-            <p class="timeline-description">AI project planning, external partnerships and government-funded R&D management. Internal AI transformation.</p>
-          </div>
+      <h2 id="experience-title">Experience</h2>
+      <ol>
+        <li class="timeline-item">
+          <p class="dates"><time datetime="2021-05">May 2021</time> – Present</p>
+          <div class="timeline-info"><h3>SBS</h3><p class="position">Manager</p><p class="team">AI Partnerships Team, Policy Office</p><p class="description">AI project planning, external partnerships, government-funded R&D management and internal AI transformation.</p></div>
         </li>
         <li class="timeline-item">
-          <div class="timeline-dates"><time datetime="2019-09">Sep 2019</time><span><span class="to">—</span> <time datetime="2020-02" style="display:inline">Feb 2020</time></span></div>
-          <div class="timeline-info">
-            <h3 class="timeline-title">Korea Development Bank</h3>
-            <p class="role-line">Intern</p>
-            <p class="team-line">Venture & Technology Finance Department</p>
-            <p class="timeline-description">Venture investment support, including follow-on investments and investor relations activities.</p>
-          </div>
+          <p class="dates"><time datetime="2019-09">Sep 2019</time> – <time datetime="2020-02">Feb 2020</time></p>
+          <div class="timeline-info"><h3>Korea Development Bank</h3><p class="position">Intern</p><p class="team">Venture &amp; Technology Finance Department</p><p class="description">Venture investment support, including follow-on investments and investor relations activities.</p></div>
         </li>
       </ol>
     </section>
     <section class="section" id="education" aria-labelledby="education-title">
-      <div class="section-heading"><span class="section-index">02 /</span><h2 id="education-title">Education</h2></div>
-      <ol class="timeline">
-        <li class="timeline-item">
-          <div class="timeline-dates"><time datetime="2014-03">Mar 2014</time><span><span class="to">—</span> <time datetime="2021-08" style="display:inline">Aug 2021</time></span></div>
-          <div class="timeline-info education-info"><h3 class="timeline-title">Sogang University</h3><p class="role-line">Bachelor’s Degree in Electronic Engineering</p></div>
-        </li>
-      </ol>
+      <h2 id="education-title">Education</h2>
+      <ol><li class="timeline-item"><p class="dates"><time datetime="2014-03">Mar 2014</time> – <time datetime="2021-08">Aug 2021</time></p><div class="timeline-info"><h3>Sogang University</h3><p class="position">Bachelor’s Degree in Electronic Engineering</p></div></li></ol>
     </section>
-    <section class="section projects-section" id="projects" aria-labelledby="projects-title">
-      <div class="section-heading"><span class="section-index">03 /</span><h2 id="projects-title">Projects</h2><p class="eyebrow">R&D / Internal</p></div>
-      <div>
-        <section aria-labelledby="national-title" id="national-projects">
-          <div class="project-group-heading"><h3 id="national-title">Government-funded R&D</h3><span class="category-tag">R&D</span></div>
-          <!-- Project order follows the LinkedIn profile. Duration is not a calendar date. -->
-          <details class="project" open>
-            <summary><span class="project-number" aria-hidden="true">01</span><span><span class="project-title">SDF-Specific Foundation Models for Heterogeneous Collaboration and Physical AI</span><span class="project-agency">MSIT / NIPA</span></span><span class="disclosure" aria-hidden="true"></span></summary>
-            <div class="project-body">
-              <p>Part of <cite>Physical AI Foundation Models for Heterogeneous Collaboration and Unmanned Factories</cite>.</p>
-              <p>Ministry of Science and ICT (MSIT) / National IT Industry Promotion Agency (NIPA)</p>
-              <dl class="project-meta"><div><dt>Parent project government funding</dt><dd>KRW 45 billion</dd></div><div><dt>Parent project duration</dt><dd>5 years</dd></div></dl>
-            </div>
-          </details>
-          <details class="project">
-            <summary><span class="project-number" aria-hidden="true">02</span><span><span class="project-title">Voice AI–Based Solution for Global Barrier-Free Content Production</span><span class="project-agency">MSIT / NIPA</span></span><span class="disclosure" aria-hidden="true"></span></summary>
-            <div class="project-body"><p>Ministry of Science and ICT (MSIT) / National IT Industry Promotion Agency (NIPA)</p><dl class="project-meta"><div><dt>Government funding</dt><dd>KRW 200 million</dd></div><div><dt>Project duration</dt><dd>1 year</dd></div></dl></div>
-          </details>
-          <details class="project">
-            <summary><span class="project-number" aria-hidden="true">03</span><span><span class="project-title">World Foundation Model Development for Physical AI Training</span><span class="project-agency">MSIT / IITP</span></span><span class="disclosure" aria-hidden="true"></span></summary>
-            <div class="project-body"><p>Ministry of Science and ICT (MSIT) / Institute of Information &amp; Communications Technology Planning &amp; Evaluation (IITP)</p><dl class="project-meta"><div><dt>Government funding</dt><dd>KRW 34 billion</dd></div><div><dt>Project duration</dt><dd>2 years</dd></div></dl></div>
-          </details>
-          <details class="project">
-            <summary><span class="project-number" aria-hidden="true">04</span><span><span class="project-title">AI-Based Content Value Prediction to Reduce Production Investment Risk</span><span class="project-agency">MCST / KOCCA</span></span><span class="disclosure" aria-hidden="true"></span></summary>
-            <div class="project-body"><p>Ministry of Culture, Sports and Tourism (MCST) / Korea Creative Content Agency (KOCCA)</p><dl class="project-meta"><div><dt>Government funding</dt><dd>KRW 4.1 billion</dd></div><div><dt>Project duration</dt><dd>3 years</dd></div></dl></div>
-          </details>
-          <details class="project">
-            <summary><span class="project-number" aria-hidden="true">05</span><span><span class="project-title">Physics-Informed AI Simulation and Production Platform for Mega-Scale Content</span><span class="project-agency">MCST / KOCCA</span></span><span class="disclosure" aria-hidden="true"></span></summary>
-            <div class="project-body"><p>Ministry of Culture, Sports and Tourism (MCST) / Korea Creative Content Agency (KOCCA)</p><dl class="project-meta"><div><dt>Government funding</dt><dd>KRW 4.15 billion</dd></div><div><dt>Project duration</dt><dd>3 years</dd></div></dl></div>
-          </details>
-        </section>
-        <section class="internal-projects" id="internal-projects" aria-labelledby="internal-title">
-          <div class="project-group-heading"><h3 id="internal-title">Internal projects</h3><span class="category-tag">AX</span></div>
-          <!-- This is a confirmed responsibility, not an invented named project or deliverable. Add named internal projects as details.project entries when supplied. -->
-          <div class="workstream"><h4>Internal AI transformation</h4><p>AI transformation (AX) within SBS.</p><span class="workstream-status">Current area of responsibility</span></div>
-        </section>
-      </div>
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <section id="national-projects" aria-labelledby="national-title">
+        <h3 class="project-category" id="national-title">Government-funded R&D</h3>
+        <details class="project" open>
+          <summary><span class="project-title">SDF-Specific Foundation Models for Heterogeneous Collaboration and Physical AI</span><span class="project-agency">MSIT / NIPA</span></summary>
+          <div class="project-body"><p>Parent project: Physical AI Foundation Models for Heterogeneous Collaboration and Unmanned Factories.</p><p class="agency-name">Ministry of Science and ICT / National IT Industry Promotion Agency</p><dl class="project-meta"><div><dt>Parent project government funding:</dt><dd>KRW 45 billion</dd></div><div><dt>Parent project duration:</dt><dd>5 years</dd></div></dl></div>
+        </details>
+        <details class="project">
+          <summary><span class="project-title">Voice AI–Based Solution for Global Barrier-Free Content Production</span><span class="project-agency">MSIT / NIPA</span></summary>
+          <div class="project-body"><p class="agency-name">Ministry of Science and ICT / National IT Industry Promotion Agency</p><dl class="project-meta"><div><dt>Government funding:</dt><dd>KRW 200 million</dd></div><div><dt>Project duration:</dt><dd>1 year</dd></div></dl></div>
+        </details>
+        <details class="project">
+          <summary><span class="project-title">World Foundation Model Development for Physical AI Training</span><span class="project-agency">MSIT / IITP</span></summary>
+          <div class="project-body"><p class="agency-name">Ministry of Science and ICT / Institute of Information &amp; Communications Technology Planning &amp; Evaluation</p><dl class="project-meta"><div><dt>Government funding:</dt><dd>KRW 34 billion</dd></div><div><dt>Project duration:</dt><dd>2 years</dd></div></dl></div>
+        </details>
+        <details class="project">
+          <summary><span class="project-title">AI-Based Content Value Prediction to Reduce Production Investment Risk</span><span class="project-agency">MCST / KOCCA</span></summary>
+          <div class="project-body"><p class="agency-name">Ministry of Culture, Sports and Tourism / Korea Creative Content Agency</p><dl class="project-meta"><div><dt>Government funding:</dt><dd>KRW 4.1 billion</dd></div><div><dt>Project duration:</dt><dd>3 years</dd></div></dl></div>
+        </details>
+        <details class="project">
+          <summary><span class="project-title">Physics-Informed AI Simulation and Production Platform for Mega-Scale Content</span><span class="project-agency">MCST / KOCCA</span></summary>
+          <div class="project-body"><p class="agency-name">Ministry of Culture, Sports and Tourism / Korea Creative Content Agency</p><dl class="project-meta"><div><dt>Government funding:</dt><dd>KRW 4.15 billion</dd></div><div><dt>Project duration:</dt><dd>3 years</dd></div></dl></div>
+        </details>
+      </section>
+      <section class="internal-projects" id="internal-projects" aria-labelledby="internal-title"><h3 id="internal-title">Internal projects</h3><p>Current responsibility: internal AI transformation (AX) at SBS.</p></section>
     </section>
-    <footer class="footer"><p>© 2026 Yonggun Choi</p><a href="#about">Back to top <span aria-hidden="true">↑</span></a></footer>
+    <footer class="footer"><p>© 2026 Yonggun Choi</p><a href="#about">Back to top</a></footer>
   </main>
 </body>
 </html>
