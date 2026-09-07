@@ -1,86 +1,86 @@
-# 최용건 · 프로필
+# Yonggun Choi — Personal website
 
-사이트: https://ch2cooh.github.io/
+[Live website](https://ch2cooh.github.io/) · [LinkedIn](https://www.linkedin.com/in/yonggun-choi-3a1a43320/)
 
-한 줄 소개, 학력·회사 이력 타임라인, 국책과제·사내 프로젝트로 구성한 개인 소개 페이지입니다. `index.html`에 내용과 디자인이 들어 있으며 별도 설치나 빌드 없이 GitHub Pages에서 동작합니다.
+An English personal profile with a portrait, a short introduction, experience and education timelines, and expandable project entries. The design uses Instrument Serif, Manrope, black typography and lime accents. The site is static HTML and CSS; no installation, JavaScript or build service is required.
 
-현재 이름과 소속, 담당 업무만 확인된 상태입니다. 실제 사진, 학력, 재직 기간, 프로젝트 목록은 제공받은 내용으로 채웁니다. 사진을 넣기 전에는 이름의 첫 글자를 표시하며, 등록하지 않은 학력과 프로젝트에는 빈 상태를 표시합니다.
+## Files
 
-## 한 줄 소개
+- `index.html`: all page content and styles.
+- `assets/profile.jpg`: the owner's 400 × 400 LinkedIn profile photograph.
+- `assets/fonts/`: self-hosted fonts and their SIL Open Font License files.
+- `.nojekyll`: serves the files directly with GitHub Pages.
 
-`index.html`의 `class="one-line"` 문구를 바꿉니다. 현재 문구:
+## Content sources
 
-> SBS AI파트너십팀에서 국책 R&D 과제와 사내 AX 전환을 담당합니다.
+Professional information and the portrait were taken from the owner's [LinkedIn profile](https://www.linkedin.com/in/yonggun-choi-3a1a43320/) and its [project list](https://www.linkedin.com/in/yonggun-choi-3a1a43320/details/projects/), accessed on 7 September 2026. Internal AI transformation was also confirmed directly by the owner.
 
-## 사진 넣기
+- SBS: Manager, May 2021–present; AI Partnerships Team, Policy Office.
+- Korea Development Bank: Intern, September 2019–February 2020; Venture & Technology Finance Department.
+- Sogang University: Bachelor's Degree, Electronic Engineering, March 2014–August 2021.
+- Five government-funded projects appear in the same order as the LinkedIn profile.
 
-1. 저장소에 `assets/profile.jpg`라는 경로로 사진을 올립니다. 세로 비율의 사진을 권장합니다.
-2. `PHOTO` 주석 아래의 `<div class="portrait" ...>...</div>`를 다음으로 바꿉니다.
+The SDF-specific project's KRW 45 billion and five-year duration refer to its **parent project**. Other amounts are the government funding stated for each project on LinkedIn. These figures are not personal funding achievements, SBS-specific allocations, or amounts attributable solely to the owner. Calendar start/end dates and individual project roles were not provided, so they are not invented. The internal AX entry describes a current responsibility; it is not a claim about a named completed project.
 
-```html
-<div class="portrait">
-  <img src="assets/profile.jpg" alt="최용건 프로필 사진" width="480" height="600">
-</div>
-```
+## Edit the introduction or photograph
 
-PNG나 WebP 사진이라면 실제 파일명에 맞춰 `src`를 수정합니다. 사진의 위아래 위치는 `.portrait img`의 `object-position` 값으로 조절할 수 있습니다. 이미지 파일이 있어야 이 마크업으로 바꿉니다.
+Change the text in `.hero-bio` inside `index.html`. The name, title and description also appear in the document metadata.
 
-## 회사 이력 추가
+Replace `assets/profile.jpg` with the desired photograph. The layout preserves a square image. If its dimensions differ, update the image's `width` and `height` attributes. Keep descriptive alternative text.
 
-`CAREER` 주석 아래 `<ol id="career-timeline">` 안에 아래 형식의 항목을 추가합니다. 아래 대괄호 안의 값은 설명용이며 실제 정보로 바꿉니다. 최신 이력을 위에 둡니다.
+## Add experience or education
+
+In `#experience` or `#education`, duplicate a `.timeline-item` within the ordered list, then update the dates, institution, role and description. Put the latest entry first. Use `is-current` only for a current position.
 
 ```html
 <li class="timeline-item">
-  <span class="period">[시작 연월] – [종료 연월]</span>
-  <h4 class="timeline-title">[회사명]</h4>
-  <p class="timeline-subtitle">[팀 / 직책]</p>
-  <p class="timeline-detail">[주요 담당 업무]</p>
+  <div class="timeline-dates">
+    <time datetime="YYYY-MM">Mon YYYY</time>
+    <span><span class="to">—</span> Mon YYYY</span>
+  </div>
+  <div class="timeline-info">
+    <h3 class="timeline-title">Institution</h3>
+    <p class="role-line">Role or degree</p>
+    <p class="team-line">Team or department</p>
+    <p class="timeline-description">A brief, factual description.</p>
+  </div>
 </li>
 ```
 
-현재 재직 중인 항목에만 `class="timeline-item is-current"`를 사용합니다. 현재 SBS 항목은 재직 시작일이 확인되면 `현재`를 `YYYY.MM – 현재`로 바꿉니다.
+Replace every example value before publishing. Optional lines can be omitted.
 
-## 학력 추가
+## Add a project
 
-`EDUCATION` 주석 아래의 `empty-history` 문단을 다음으로 교체합니다. 추가 학력은 `<li>`를 복사해 같은 `<ol>` 안에 넣습니다.
-
-```html
-<ol class="timeline" id="education-timeline">
-  <li class="timeline-item">
-    <span class="period">[입학 연월] – [졸업 연월]</span>
-    <h4 class="timeline-title">[학교명]</h4>
-    <p class="timeline-subtitle">[학과 / 학위]</p>
-  </li>
-</ol>
-```
-
-## 프로젝트 추가
-
-국책과제는 `id="national-projects"`, 사내 프로젝트는 `id="internal-projects"` 영역에 넣습니다. 해당 영역의 `empty-projects` 문단을 다음으로 바꿉니다. 다음 프로젝트부터는 `<li class="project">...</li>`만 복사해 같은 목록에 추가합니다. 최신 프로젝트를 위에 둡니다.
+Add the following block to `#national-projects` or `#internal-projects`. Use the next sequence number. All project entries use native HTML disclosure controls that work with a keyboard and without JavaScript.
 
 ```html
-<ol class="project-list">
-  <li class="project">
-    <span class="period">[시작 연월] – [종료 연월 또는 진행 중]</span>
-    <h4>[프로젝트명]</h4>
-    <p class="project-role">[담당 역할] · [수행기관 또는 협업 부서]</p>
-    <p class="project-description">[실제로 수행한 내용이나 성과를 한두 문장으로 작성]</p>
-  </li>
-</ol>
+<details class="project">
+  <summary>
+    <span class="project-number" aria-hidden="true">06</span>
+    <span>
+      <span class="project-title">Project title</span>
+      <span class="project-agency">Funding agency or internal team</span>
+    </span>
+    <span class="disclosure" aria-hidden="true"></span>
+  </summary>
+  <div class="project-body">
+    <p>Your role and a concise description of the work.</p>
+    <dl class="project-meta">
+      <div><dt>Period</dt><dd>Mon YYYY – Mon YYYY</dd></div>
+      <div><dt>Role</dt><dd>Your actual role</dd></div>
+    </dl>
+  </div>
+</details>
 ```
 
-필요한 경우 해당 프로젝트 안에 확인 가능한 자료 링크를 추가합니다.
+Keep only relevant, verified information. To open an entry by default, add the `open` attribute. When adding specific internal projects, the general `.workstream` block can be retained as an introduction or removed if it becomes redundant.
 
-```html
-<a class="project-link" href="[자료의 실제 주소]">관련 자료 ↗</a>
-```
+## Design and accessibility
 
-역할·성과·링크가 없는 항목은 해당 문단이나 링크를 생략하면 됩니다. 날짜, 과제명, 담당 역할, 성과는 실제 정보를 사용합니다.
+Change CSS variables in `:root` to adjust the palette. The portrait, fonts and all other required assets are served locally. The layout adapts to mobile screens, includes a skip link and visible keyboard focus, and respects reduced-motion preferences. Page navigation and project disclosures use native browser behavior.
 
-## 게시와 확인
+Font sources: [Manrope](https://github.com/google/fonts/tree/main/ofl/manrope) and [Instrument Serif](https://github.com/google/fonts/tree/main/ofl/instrumentserif). License notices are retained in `assets/fonts/`.
 
-GitHub 저장소에서 파일을 수정해 `main` 브랜치에 저장하면 GitHub Pages가 자동으로 게시합니다. 게시 설정은 **Settings → Pages → Deploy from a branch → main → / (root)**입니다.
+## Publish
 
-로컬에서는 `index.html`을 브라우저로 열면 됩니다. 외부 폰트나 JavaScript 없이 동작하며 모바일·키보드 탐색·인쇄용 스타일을 포함합니다.
-
-공식 안내: [GitHub Pages 빠른 시작](https://docs.github.com/en/pages/quickstart)
+Commit changes to `main`. GitHub Pages is configured to publish from `main` → `/ (root)`. There is no separate build step. To preview locally, open `index.html` in a browser or serve the folder with a static file server.
