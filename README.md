@@ -1,30 +1,86 @@
-# ch2cooh · Personal Biography
+# 최용건 · 프로필
 
-SBS AI파트너십팀에서 담당하는 국책 R&D 과제와 사내 AX 전환 업무를 소개하는 개인 페이지입니다.
+사이트: https://ch2cooh.github.io/
 
-사이트 주소: https://ch2cooh.github.io/
+한 줄 소개, 학력·회사 이력 타임라인, 국책과제·사내 프로젝트로 구성한 개인 소개 페이지입니다. `index.html`에 내용과 디자인이 들어 있으며 별도 설치나 빌드 없이 GitHub Pages에서 동작합니다.
 
-## 내용 수정
+현재 이름과 소속, 담당 업무만 확인된 상태입니다. 실제 사진, 학력, 재직 기간, 프로젝트 목록은 제공받은 내용으로 채웁니다. 사진을 넣기 전에는 이름의 첫 글자를 표시하며, 등록하지 않은 학력과 프로젝트에는 빈 상태를 표시합니다.
 
-`index.html` 한 파일에 소개 내용과 디자인이 들어 있습니다. 별도 설치나 빌드가 필요하지 않습니다.
+## 한 줄 소개
 
-- 표시 이름: 현재 GitHub 계정명인 `ch2cooh`를 사용합니다. 실명을 넣으려면 프로필 이름, 상단 이름, 페이지 제목과 설명, 하단 저작권 표시를 수정하세요. GitHub 링크와 사이트 주소는 유지합니다.
-- 소개: `id="about"` 영역의 문장을 수정합니다.
-- 업무: `id="experience"` 영역에서 담당 업무를 수정합니다.
-- 관심 분야: `id="interests"` 영역의 항목을 수정합니다.
-- 색상: 파일 상단 `:root`의 `--blue` 값을 변경합니다.
+`index.html`의 `class="one-line"` 문구를 바꿉니다. 현재 문구:
 
-소개 문구는 제공된 소속과 담당 업무를 바탕으로 작성한 초안입니다. 재직 시작일, 직급, 학력, 구체적인 과제명과 성과 수치는 제공되지 않아 추가하지 않았습니다. 관심 분야와 업무 설명은 원하는 표현으로 수정할 수 있습니다.
+> SBS AI파트너십팀에서 국책 R&D 과제와 사내 AX 전환을 담당합니다.
 
-## GitHub Pages 설정
+## 사진 넣기
 
-1. `ch2cooh.github.io` 저장소의 `main` 브랜치 최상위에 `index.html`, `.nojekyll`을 둡니다.
-2. 저장소의 **Settings → Pages**를 엽니다.
-3. **Source → Deploy from a branch**, **Branch → main**, 폴더 **/ (root)**를 선택하고 저장합니다.
-4. 배포가 끝나면 사이트 주소로 접속합니다. 이후 `main` 브랜치에 수정 내용을 올리면 다시 배포됩니다.
+1. 저장소에 `assets/profile.jpg`라는 경로로 사진을 올립니다. 세로 비율의 사진을 권장합니다.
+2. `PHOTO` 주석 아래의 `<div class="portrait" ...>...</div>`를 다음으로 바꿉니다.
+
+```html
+<div class="portrait">
+  <img src="assets/profile.jpg" alt="최용건 프로필 사진" width="480" height="600">
+</div>
+```
+
+PNG나 WebP 사진이라면 실제 파일명에 맞춰 `src`를 수정합니다. 사진의 위아래 위치는 `.portrait img`의 `object-position` 값으로 조절할 수 있습니다. 이미지 파일이 있어야 이 마크업으로 바꿉니다.
+
+## 회사 이력 추가
+
+`CAREER` 주석 아래 `<ol id="career-timeline">` 안에 아래 형식의 항목을 추가합니다. 아래 대괄호 안의 값은 설명용이며 실제 정보로 바꿉니다. 최신 이력을 위에 둡니다.
+
+```html
+<li class="timeline-item">
+  <span class="period">[시작 연월] – [종료 연월]</span>
+  <h4 class="timeline-title">[회사명]</h4>
+  <p class="timeline-subtitle">[팀 / 직책]</p>
+  <p class="timeline-detail">[주요 담당 업무]</p>
+</li>
+```
+
+현재 재직 중인 항목에만 `class="timeline-item is-current"`를 사용합니다. 현재 SBS 항목은 재직 시작일이 확인되면 `현재`를 `YYYY.MM – 현재`로 바꿉니다.
+
+## 학력 추가
+
+`EDUCATION` 주석 아래의 `empty-history` 문단을 다음으로 교체합니다. 추가 학력은 `<li>`를 복사해 같은 `<ol>` 안에 넣습니다.
+
+```html
+<ol class="timeline" id="education-timeline">
+  <li class="timeline-item">
+    <span class="period">[입학 연월] – [졸업 연월]</span>
+    <h4 class="timeline-title">[학교명]</h4>
+    <p class="timeline-subtitle">[학과 / 학위]</p>
+  </li>
+</ol>
+```
+
+## 프로젝트 추가
+
+국책과제는 `id="national-projects"`, 사내 프로젝트는 `id="internal-projects"` 영역에 넣습니다. 해당 영역의 `empty-projects` 문단을 다음으로 바꿉니다. 다음 프로젝트부터는 `<li class="project">...</li>`만 복사해 같은 목록에 추가합니다. 최신 프로젝트를 위에 둡니다.
+
+```html
+<ol class="project-list">
+  <li class="project">
+    <span class="period">[시작 연월] – [종료 연월 또는 진행 중]</span>
+    <h4>[프로젝트명]</h4>
+    <p class="project-role">[담당 역할] · [수행기관 또는 협업 부서]</p>
+    <p class="project-description">[실제로 수행한 내용이나 성과를 한두 문장으로 작성]</p>
+  </li>
+</ol>
+```
+
+필요한 경우 해당 프로젝트 안에 확인 가능한 자료 링크를 추가합니다.
+
+```html
+<a class="project-link" href="[자료의 실제 주소]">관련 자료 ↗</a>
+```
+
+역할·성과·링크가 없는 항목은 해당 문단이나 링크를 생략하면 됩니다. 날짜, 과제명, 담당 역할, 성과는 실제 정보를 사용합니다.
+
+## 게시와 확인
+
+GitHub 저장소에서 파일을 수정해 `main` 브랜치에 저장하면 GitHub Pages가 자동으로 게시합니다. 게시 설정은 **Settings → Pages → Deploy from a branch → main → / (root)**입니다.
+
+로컬에서는 `index.html`을 브라우저로 열면 됩니다. 외부 폰트나 JavaScript 없이 동작하며 모바일·키보드 탐색·인쇄용 스타일을 포함합니다.
 
 공식 안내: [GitHub Pages 빠른 시작](https://docs.github.com/en/pages/quickstart)
-
-## 로컬에서 보기
-
-`index.html`을 브라우저로 열면 됩니다. 외부 폰트, 이미지, JavaScript 라이브러리 없이 동작합니다. 화면 크기에 맞춰 레이아웃이 바뀌며, 키보드 탐색과 인쇄용 스타일도 포함되어 있습니다.
