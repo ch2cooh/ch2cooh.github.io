@@ -85,7 +85,8 @@ h3 { font-size: 16px; font-weight: 550; line-height: 1.65; letter-spacing: -.02e
 .project-meta dt { color: var(--muted); font-size: 11px; }
 .project-meta dd { margin-top: 1px; color: var(--ink); font-size: 14px; font-weight: 450; }
 .internal-projects { grid-column: 2; margin-top: 4px; }
-.internal-projects > .project-category { margin-bottom: 0; }
+.internal-projects > .project-category { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.internal-intro { margin-top: 8px; padding-bottom: 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
 .internal-project { padding: 21px 0; border-bottom: 1px solid var(--line); }
 .internal-project .project-title { margin: 0; }
 .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 11px; }
